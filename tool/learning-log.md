@@ -17,7 +17,7 @@
 ![sprite attribute tinkering](p5play-sprite-att-tinker.png)
 * Sprites have a default velocity of 0 but can be changed with `.velocity.x = ` or `.velocity.y =`. Positive x value will make the sprite travel to the right and negative value will travel left. A Positive y value will travel down while a negative value will travel up. Activating the velocity for both axis at the same time will have the sprite travel diagonally
 
-* When I was taking notes on Grouping from the p5play website I didn't really understand how it worked, but after watching the video demonstrate it I think I understand it better now: Grouping just makes a bunch of the same sprite by creating a kind of loop until a certain amount of sprites is met. The loop defines a limit of how many sprites are to be created and will stop after it hits the specified number.
+* When I was taking notes on Grouping from the p5play website I didn't really understand how it worked, but after watching the video demonstrate it I think I understand it better now, the p5play website and the video use different methods but I think they generally mean the same thing. The video used `for (let i=0; i < 5; i++){let block = new Sprite ()}` while the website used `while (dots.length < 24) {let block = new block.Sprite();` and if it means what I think it means then as long as the amount of current amount of sprites is lower than the specified number, then the loop will keep creating copies of the sprite until the number is met.
 * I messed around with the sprite sizes as they collided with each other and noticed that the size of the sprites do affect how they bump into each other like how physics actually works: the smaller the sprite is the less impact it'll cause and vice versa.
 
 ### X/X/XX:
