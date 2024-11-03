@@ -18,11 +18,22 @@ Basic Idea:
 ### Tool
 I decided to use the tool [P5Play](https://p5play.org/) to create Part B with Xue while Ellen and Qilin use [Kaboom](https://kaboomjs.com/) to create Part A. To learn P5Play I will follow the website's [Learn](https://p5play.org/learn/) page where they teach all of the different code snippets that can be used, ranging from sprites to gravity to animation. Additionally, there are also [Youtube videos](https://www.youtube.com/@davidbouchard) on P5Play that demonstrates and tinkers with different P5Play codes.
 
-### Engineering Design Process
-Right now I think we are in the Brainstorm and Planning stage as we will continue to adjust, add, and change details to the game as we collaborate. And next, we are going to be learning out tools throughout the year to create our game.
-
+So far I've learned about [Sprites](https://p5play.org/learn/sprite.html) and how to apply different properties such as `sprite.x`, `sprite.y`, and more to determine the position, size, orientation, and color of the sprite. And to set an image as a sprite you can link the sprite through its url pathway:
+```js
+moustache = new Sprite();
+moustache.img = 'moustache_PNG37.png';
+moustache.image.scale = .20
+moustache.image.offset.y = -10;
+moustache.image.offset.x = 29;
+moustache.w = 430;
+moustache.h = 100;
+```
 ### Skills
 The skills I am practicing are **collaboration** and **communcation** because this is a bigger project with 4 people working in groups of two on separate functions that will come together as one whole game. In order to ensure that everything goes smoothly and everyone knows whos doing what, we have to communicate with each other, checking on others and how they are doing, as well as working together when someone needs help.
+
+### Engineering Design Process
+Right now I think we are in the Brainstorm and Planning stage as we will continue to adjust, add, and change details to the game as we work and tinker together. We will also consider things we can add beyond the MVP. And next, we are going to be learning out tools throughout the year to create our game.
+
 
 Text
 
