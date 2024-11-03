@@ -22,7 +22,7 @@ I decided to use the tool [P5Play](https://p5play.org/) to create Part B with Xu
 Right now I think we are in the Brainstorm and Planning stage as we will continue to adjust, add, and change details to the game as we collaborate. And next, we are going to be learning out tools throughout the year to create our game.
 
 ### Skills
-The skills I am practicing are **collaboration** and **communcation** because this is a bigger project with 4 people working in groups of two on separate functions that will come together as one whole game. In order to ensure that everything goes smoothly and everyone knows whos doing what, we have to communicate with each other, checking on others and how they are doing, as well as working together when someone needs help
+The skills I am practicing are **collaboration** and **communcation** because this is a bigger project with 4 people working in groups of two on separate functions that will come together as one whole game. In order to ensure that everything goes smoothly and everyone knows whos doing what, we have to communicate with each other, checking on others and how they are doing, as well as working together when someone needs help.
 
 Text
 
