@@ -6,18 +6,17 @@ For this year's freedom project, my friends and I have come together to decide t
 
 These games often have a risk/reward exchange where players exchange the in-game currency to "pull" or "roll" for a certain character (most often of the highest rarity), where the reward would be obtaining the desired character and the risk is losing against the system and not obtaining the desired item. There is a fixed chance of obtaining different rarities ranging from rare (R), super rare (SR), to super super rare (SSR) with the probability decreasing as rarity increases. Once the user reaches a certain number of pulls, they are guaranteed a random SSR character. Once the user obtains a SSR character, the number of pulls reset back to zero. This will all be essential to this section of the game. This [video](https://youtu.be/s_v_g72w-6M?si=7Hdjcp8Kz28orYRe) (0:08-1:22) on Cookie Run Kingdom also explains the gacha system but more comprehensively.
 
-
-#### Big Idea
+#### Game
 The main idea of this project is to combine two separate game functions together into one game. **Part A** will be where the user nevigates the avatar, a cat, around a 2D tile map to collect the game's currency, cat food, with the help of a variety of boosts to assisst the user. The cat food will randomly spawn around the map and the user will have to quickly run around the map avoiding obstacles and hindrances to collect them. The obstacles may consist of puddles of water that the player has to go around, or dogs that will end the round. The boosts can be cat toys that increase the speed of the user for a temporary amount of time, and catnip that can increase the remaining time. The round will have 1 minute of gameplay to collect as much food as they can.
 
 Basic Idea:
 
 ![fp-collect-sketch](https://github.com/user-attachments/assets/66b85fdb-5091-4a36-b22e-cdc02b83c559)
 
-
 **Part B** will be where the user spends the currency they collected to obtain new kinds of cat avatars. For now we have settled with the idea of having a gumball looking machine where the cat avatars will be dispensed after inserting the cat food. There will be a total of 15 different avatars with different rarities and probabilities; 7 *Rare*: 75%, 5 *Super Rare*: 20%, and 3 *Super Super Rare*: 5%. Note that there is the chance of obtaining the same cat avatar more than once. 1 pull will cost 10 cat foods and a 10 pull will cost 100 cat foods. Once the user accumulates a total of 50 pulls, they are guaranteed to get a random *SSR* cat avatar. We might add a library system where the user can check what cats they have and have not collected.
 
-
+### Tool
+I decided to use the tool [P5Play](https://p5play.org/) to create Part B with Xue while Ellen and Qilin use [Kaboom](https://kaboomjs.com/) to create Part A. To learn P5Play I will follow the website's [Learn](https://p5play.org/learn/) page where they teach all of the different code snippets that can be used, ranging from sprites to gravity to animation. Additionally, there are also [Youtube videos](https://www.youtube.com/@davidbouchard) on P5Play that demonstrates and tinkers with different P5Play codes.
 
 Text
 
