@@ -77,8 +77,52 @@ My tinker code looks like this:
           }
 ```
 
+### 11/11/24
+Because my project involves a lot of random generating I wanted to test out what I learned in my project with sprites.
+* I took my random number generating code snippet and assigned it to a `rng` variable then I wrote an `if else` function to make it so that if the value was equal to 1, then a sprite would be made. This didn't work.
+* I back tracked and made things simpler, taking things step by step to see which part of the code was wrong and which part worked
+* I set the `rng` value to 1 and changed the `if` statement to set the sprite's color to blue when the value of 1, this worked.
+``` js
+   var win
+   var rng = 1
 
+      function setup() {
+         createCanvas(windowWidth, windowHeight);
+         win = new Sprite();
+      }
 
+      function draw() {
+         background(220);
+
+         if (rng == 1) {
+            win.color = 'blue';
+         }
+      }   
+```
+* Next I re-added the random value code to generate a number from 0 to 4 and set the `if else` function if set the color to blue if the value was `<=` 1 and the color to red if the value was `>=` 2. This makes the sprite have a 50% chance of being either red or blue
+* Since this works I decided to try out the numbers that we will use in the game
+``` js
+   var win
+   var rng = Math.floor(Math.random()*101)
+
+      function setup() {
+         createCanvas(windowWidth, windowHeight);
+         win = new Sprite();
+      }
+
+      function draw() {
+         background(220);
+
+         if (rng > 1 && rng < 75) {
+                win.color = 'brown';
+            } else if (rng > 75 && rng < 95){
+                win.color = 'grey';
+            } else if (rng > 95) {
+                win.color = 'yellow'
+            }
+      }   
+```
+* To make sure this works I refreshed the viewing page multiple times until I saw each other several times and the rates that each color popped up matches their respective probabilty.
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
