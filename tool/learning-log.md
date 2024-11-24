@@ -130,3 +130,49 @@ Because my project involves a lot of random generating I wanted to test out what
 * Questions you still have
 * What you're going to try next
 -->
+
+### 11/24/24
+Now that I can generate different outcomes depending on the value that is generated, I want to make it so that function happens when I click a button.
+* I look up a video on [keyboard and mouse inputs for p5play](https://www.youtube.com/watch?v=s-nFqp4Jd3k)
+* I also looked through the p5play learn pages for a certain piece of mouse input, which is `if (mouse.presses())`
+To start off simple I set it so the sprite's color becomes red when I click the mouse
+
+
+``` js
+            var pull
+
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                pull = new Sprite();
+            }
+
+            function draw() {
+                background(220);
+
+                if (mouse.presses()) {
+                    pull.color = 'red'
+                }
+            }
+```
+After confirming that it worked I then replaced the fixed `pull.color='red'` with the conditional from before to create a 50/50 chance of the sprite becoming red or blue
+``` js
+if (mouse.presses()) {
+                    rng = Math.floor(Math.random()*2);
+                    if (rng == 0){
+                        pull.color = 'red'
+                    } else {
+                        pull.color = 'blue'
+                    }
+
+                }
+```
+Then I moved onto putting the entire chunk of conditionals into the function to generate brown, grey, or yellow when I click my mouse
+``` js
+               if (mouse.presses()) {
+                    rng = Math.floor(Math.random()*101);
+                    if (rng > 1 && rng < 75){pull.color = 'brown'}
+                    else if (rng > 75 && rng < 95){pull.color = 'grey'}
+                    else if (rng > 95) {pull.color = 'yellow'}
+                }
+```
+To go even further, instead of just changing the sprite's colors, I made it so that it would change between the custom sprites I made for the final project and it works! The next step will to have the program choose a sprite from an array because the `brown`, `grey`, and `yellow` were only the rarities and there will be multiple sprites in each rarity.
