@@ -176,3 +176,36 @@ Then I moved onto putting the entire chunk of conditionals into the function to 
                 }
 ```
 To go even further, instead of just changing the sprite's colors, I made it so that it would change between the custom sprites I made for the final project and it works! The next step will to have the program choose a sprite from an array because the `brown`, `grey`, and `yellow` were only the rarities and there will be multiple sprites in each rarity.
+
+### 12/2/24
+Before I get too carried away with just the generation of sprites because that is mostly javascript code, I have to learn how to do the other components of my game. This time I wanted to figure out how to create sprites after the user clicks a button because that is more similar to how they will play the game in the future.
+* I first googled "p5play buttons" and found a [p5.js](https://p5js.org/reference/p5/createButton/) site with the information I needed.
+   * The website with a function example along with the code with comments describing the function of different parts of code which was really helpful.
+   * `createButton()` is assigned to a variable to create a button, and then a string or a number is put into the parenthesis to be displayed on the button.
+   * `.mousePressed()` is put after the button variable name and the code that is run once the button is pressed is placed inside the parenthesis, this is often a function that is being called by the button.
+```js
+let button = createButton('click me'); //creates the function
+
+function repaint() { // function
+  let g = random(255);
+  background(g);
+}
+
+button.mousePressed(repaint); // pressing button calls the function
+```
+But instead of having the button change the background color, I made a different function that created
+
+learn how button
+google how [p5play button](https://p5js.org/reference/p5/createButton/)
+button appears under the canvas
+use `.position` to change x y coordinates
+tried this, works
+```js
+button.mousePressed(newBall);
+
+
+                function newBall(){
+                    new ball.Sprite(500, 500);
+                }
+```
+
