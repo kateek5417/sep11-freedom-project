@@ -193,19 +193,24 @@ function repaint() { // function
 
 button.mousePressed(repaint); // pressing button calls the function
 ```
-But instead of having the button change the background color, I made a different function that created
+But instead of having the button change the background color, I made a different function that created one new ball sprite when the button was pressed:
 
-learn how button
-google how [p5play button](https://p5js.org/reference/p5/createButton/)
-button appears under the canvas
-use `.position` to change x y coordinates
-tried this, works
 ```js
+let button = createButton(`ball`)
+button.position(100, 100);
+
 button.mousePressed(newBall);
 
-
-                function newBall(){
-                    new ball.Sprite(500, 500);
-                }
+function newBall(){
+   new ball.Sprite(windowWidth/2, windowHeight/2);
+}
 ```
 
+This time the button calls the `newBall` function that makes a new sprite in the center of the page. 
+
+**Note: this does not delete the previous sprite and replace it with a new one, it only stacks the sprite on top of each other, hence if stack is moved it _will_ explode into a bunch of sprites.**
+
+To fix this issue I used the `.removeAll()` property I found on p5play's [sub group](https://p5play.org/learn/group.html?page=5) page and I put it in the `newBall` function right above the code part that created the sprite so that it'd delete the previous sprite and _then_ make a new one
+* To make sure that this worked I applied `world.gravity.y = 1` so that the sprite would move out of its original location so I can see if the sprite is removed and replaced instead of just stacking on top of each other.
+
+Now I can connect the button to the functions that will generate the random cat sprite for the user.
