@@ -29,11 +29,58 @@ moustache.h = 100;
 I while I was trying to size the hitbox, I noticed that it wasn't centered with the image so I used `.offset` to move the hitbox, not the sprite. This is what the code resulted in:
 ![380523202-6daaf82a-240d-45d1-b599-d1e7133f132c](https://github.com/user-attachments/assets/70bd613c-8da2-412e-b540-3e39c02f516d)
 
-P5play's [Learn}(https://p5play.org/learn/index.html) page offered a page on [sprite physics](https://p5play.org/learn/sprite.html?page=1) which included gravity and colliders properties.
+P5play's [Learn}(https://p5play.org/learn/index.html) page offered a page on [sprite physics](https://p5play.org/learn/sprite.html?page=1) which included gravity and colliders properties. Colliders are used to set how sprites interect when they collide into each other. By default colliders are set to dynamic and don't move unless moved by something else (could be another sprite, gravity, etc), static colliders do not move, and kinetic colliders move the sprite based on code rather than interaction.
 
+To test there colliders I created a slanted static floor using the `.rotation` property and made it static with `collider = 's'`. 
+```js
+   let moustache, floor;
+
+          function setup() {
+            createCanvas(windowWidth, windowHeight);
+            world.gravity.y = 10;
+
+            moustache = new Sprite();
+            moustache.img = 'moustache_PNG37.png';
+            moustache.image.scale = .20
+            moustache.image.offset.y = -10;
+            moustache.image.offset.x = 29;
+            moustache.x = windowWidth/2
+            moustache.y = 100;
+            // moustache.w = 430;
+            // moustache.h = 100;
+            moustache.diameter = 40
+
+            floor = new Sprite();
+            floor.w = 1000;
+            floor.y = windowHeight-200;
+            floor.collider = 's';
+            floor.rotation = 20;
+          }
+```
+Then with `world.gravity.y` I can make the `moustache` sprite fall down onto the slanted `floor` sprite and because I changed `moustache`'s hitbox round with `moustache.diameter = 40`, the sprite rolled down the floor which I caught a picture of:
+![image](https://github.com/user-attachments/assets/126490f7-7647-4790-b30b-2ff923c755e3)
+
+After this I took some tinkering with `loops`, `conditionals`, and `Math.random()` to be able to randomly generate different sprites based on certain interger ranges. To test out whether the code was generating properly I needed a way to control when the program would generate a new value and its outcome. I browsed through p5play and found a piece of code that would work perfectly for my testing on the [subgroup](https://p5play.org/learn/group.html?page=5) page. I used `if (mouse.presses())` to activate my random number generating (rng) code.
+``` js
+if (mouse.presses()) {
+                    rng = Math.floor(Math.random()*101);
+                    if (rng > 1 && rng < 75){pull.img = 'eepycat.png'}
+                    else if (rng > 75 && rng < 95){pull.img = 'loafcat.png'}
+                    else if (rng > 95) {pull.img = 'notgojo.png'}
+                }
+                console.log(rng)
+```
+This was the piece of code I was testing and I used the `if (mouse.presses())` condition to activate it. When the mouse button is pressed then a number between 0 and 100 will but generated depending what that number is different images will pop up on screen. I used `console.log(rng)` on the bottom so that I could check if the generated number matched up with the displayed result.
+
+My plans over the winter break is to finish drawing my sprites for the game because I drew some of them earlier in the year but as assignments increased I've had no time to focus on them. The sprites my group still needs are the boost items, the dispenser machine, the cat crates, the cat food, the hostiles, some remaining cats, and maybe some obstacles. 
+
+### Skills
+Some skills I practiced by learning p5play and tinkering on my own were **logical reasoning** and **growth mindset**. When I found that `if(mouse.presses())` code snippet on the p5play website I had to change up some of the code so that it would fit my code, and because it was condition I knew that I could put it infront of my conditional too. As I tinkered and coded, things would come together like puzzle pieces because they continued to build on top of each other. Sometimes thoughts would pop up in my head about what the final product would look like and I would make a mental note to myself that I would need to learn more p5play or tinker more with the code to be able to make the idea happen, like the user interaction and the need to learn about p5play buttons in the future.
 
 ### EDP
-### Skills
+For the past months I have been **researching** my tool and as I continue to build up my knowledge on it I can start **planning** how I can implement the tool into my code for my final project. But for now I will continue to **research** my tool and learn more about what I can do with it.
+
+
 
 [Previous](entry01.md) | [Next](entry03.md)
 
