@@ -214,3 +214,33 @@ To fix this issue I used the `.removeAll()` property I found on p5play's [sub gr
 * To make sure that this worked I applied `world.gravity.y = 1` so that the sprite would move out of its original location so I can see if the sprite is removed and replaced instead of just stacking on top of each other.
 
 Now I can connect the button to the functions that will generate the random cat sprite for the user.
+
+12/30/24
+Continuing with buttons, now that I could create new sprites with the click of a button, I wanted to try tweaking the button function so that it "uses up values" in order to run. The premise is that the button will subtract one from a monetary value, create a sprite, and then adds one to a counter value. And if there isn't enough "money" then the function won't run.
+
+Starting with the value counting, I created a `variable` called "spent" with the defined value of 0, and another `variable` called "money" with the defined value of 100. Then I used `text()` inside the `draw` function to display the two values.
+``` js
+let spent = 0;
+let money = 100;
+ function draw() {
+   background(200);
+   textSize(100);
+   text("spent: " + spent,width/2-25, height/2-150);
+   text("money: " + money, width/2-125, height-500)
+}
+```
+![image](https://github.com/user-attachments/assets/e1026d65-50f1-4d55-b967-9817fc79c181)
+
+Then to change the values everytime the button is pressed, I added `spent ++` and `money --` to the `newBall` funciton. That way, everytime the `newBall` function runs to create a new ball sprite, one is subtracted from `money` and one is added to `spent`.
+```js
+let button = createButton(`buy ball`) //make button 2
+button.position(100, 100);
+
+function newBall(){ //button 2 function
+   ball.removeAll();
+   new ball.Sprite(windowWidth/2, windowHeight/2);
+   spent ++;
+   money --;
+}
+button.mousePressed(newBall); // call button 2 function
+```
