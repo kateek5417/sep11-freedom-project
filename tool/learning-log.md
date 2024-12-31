@@ -215,7 +215,7 @@ To fix this issue I used the `.removeAll()` property I found on p5play's [sub gr
 
 Now I can connect the button to the functions that will generate the random cat sprite for the user.
 
-12/30/24
+### 12/30/24
 Continuing with buttons, now that I could create new sprites with the click of a button, I wanted to try tweaking the button function so that it "uses up values" in order to run. The premise is that the button will subtract one from a monetary value, create a sprite, and then adds one to a counter value. And if there isn't enough "money" then the function won't run.
 
 Starting with the value counting, I created a `variable` called "spent" with the defined value of 0, and another `variable` called "money" with the defined value of 100. Then I used `text()` inside the `draw` function to display the two values.
@@ -244,3 +244,32 @@ function newBall(){ //button 2 function
 }
 button.mousePressed(newBall); // call button 2 function
 ```
+![image](https://github.com/user-attachments/assets/79e3bfa4-4108-4388-b1ce-8240f965e0e1)
+
+Next I had to condition the function to run only when there is enough "money". I added an `if` statement inside of the `newBall` button function to run if there was at least 1 money, else a new ball sprite will not be made.
+``` js
+function newBall(){ //button 2 function
+   if (money >= 1){
+      ball.removeAll();
+      new ball.Sprite(windowWidth/2, windowHeight/2);
+      spent ++;
+      money --;
+   }
+}
+```
+
+https://github.com/user-attachments/assets/5a777384-7334-49b3-a322-728551c98fe6
+
+You can see that everytime I click on the `new ball` button, one sprite is created and the values of `money` and `spent` decrease and increase accordingly. And once `money` is decreased to the value of 0, no more sprites are made.
+
+
+
+
+
+
+
+
+
+
+
+
