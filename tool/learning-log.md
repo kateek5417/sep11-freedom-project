@@ -262,9 +262,62 @@ https://github.com/user-attachments/assets/5a777384-7334-49b3-a322-728551c98fe6
 
 You can see that everytime I click on the `new ball` button, one sprite is created and the values of `money` and `spent` decrease and increase accordingly. And once `money` is decreased to the value of 0, no more sprites are made.
 
+### 1/12/25
+Now that I've figured out how to make buttons, how to create new sprites, how to generate random values, and more, I wanted to combine everything together. In order to do this I looked back at the different tinkering files I've been accumulating over the past months. 
+* To start off I first made a new button with the basic function of generating a number between 0 (inclusive) and 100 (excluded).
+``` js
+         var rng
 
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                var box = new Sprite(1000, 500, 50, 50);
+                box.color = 'white'
 
+                let pull = createButton(`click me`) //make `pull` button
+                pull.position(100, 100);
 
+                pull.mousePressed(genRarity); //calls `pull` function when its pressed
+
+                function genRarity(){ //`pull` function
+                    rng = Math.floor(Math.random()*100); //generates a value ranging of 100
+                    console.log(rng)
+                }
+            }
+```
+* Next I touched up some of the if/else code from my random generator function and added it into the `pull` button function
+  ``` js
+           var rng
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                var box = new Group();
+
+                let pull = createButton(`click me`) //make `pull` button
+                pull.position(100, 100);
+
+                pull.mousePressed(genRarity); //calls `pull` function when its pressed
+
+                function genRarity(){
+                    box.removeAll();
+                    new box.Sprite(windowWidth/2, windowHeight/2);
+                    rng = Math.floor(Math.random()*100+1); //generates a value ranging of 100
+                    //box color differs base on rng value
+                    if (rng <= 75){box.color = 'brown'; return "r"}
+                    else if (rng > 75 && rng <= 95){box.color = 'grey'; return "sr"}
+                    else if (rng > 95) {box.color = 'yellow'; return "ssr"}
+                    console.log(rng)
+                }
+            }
+  ```
+In the `Math.random()` part I added `+1` after `*100` so that instead of generating a number between 0 and 99, it would properly generate a number between 1 and 100. The `*100` sets the 0 to 99 range and then the addition of 1 at the end raises it to 1 through 100. This way I won't be confused about what numbers are included and the proper range size of numbers. 
+
+This all creates a box representing the rarity of the item with brown being rare, grey being super rare, and yellow being super super rare.
+
+Next thing I want to try is to make the "box" interactable so that the user will be able to "open" the box to obtain their item. So far I think I've managed to set up the function by loosely glancing over [this piece of code](https://editor.p5js.org/mbardin/sketches/O9daqLpj_) but it doesn't actually work for some reason. I will try to look more in depth later.
+``` js
+ box.onMousePressed = function() {
+                    box.removeAll();
+                    }
+```
 
 
 
