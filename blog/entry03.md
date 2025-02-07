@@ -14,7 +14,7 @@ Here is a sneekpeek at some of the many sprites for the game:
 ![image](https://github.com/user-attachments/assets/c037cfbf-b58f-4f9f-b43d-e0f894002e0e)
 ![image](https://github.com/user-attachments/assets/b612d6c7-daad-4c8e-a23e-ef0ff0f29e66)
 
-The last part I left off at in my IDE was 
+The last part I left off at in my IDE was Creating random colored box sprites with the push of a button. The next thing I intend to do with p5play is to figure out how to delete the box sprite and create another sprite in place of the removed sprite at the same time.
 
 [Previous](entry02.md) | [Next](entry04.md)
 
