@@ -319,7 +319,10 @@ Next thing I want to try is to make the "box" interactable so that the user will
                     }
 ```
 
+### 2/24/25
+tried .onclick
 
+tried kb.released
 
 
 
