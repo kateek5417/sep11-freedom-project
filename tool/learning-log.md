@@ -320,11 +320,44 @@ Next thing I want to try is to make the "box" interactable so that the user will
 ```
 
 ### 2/24/25
-tried .onclick
+Me trying to figure out how to make a sprite clickable probably shaved some years off of my lifespan. Did I want to rip my hair out? Yes. Was it worth it? Also yes.
 
-tried kb.released
+When I searched "p5play clicking on sprite" I came upon a web editor [demo](https://editor.p5js.org/mbardin/sketches/O9daqLpj_) about `.onMousePressed` that would carry out a function after that sprite was pressed. But when I tried the code in my IDE it didn't work, nothing happened when I clicked on the sprite.
+``` js
+var sprite = new Group()
+new sprite.Sprite()
+sprite.onMousePressed = function(){
+   sprite.color = "blue"
+}
+```
+I fiddled around with it a few times but it just wouldn't work at all. At one point I thought it was something I was doing wrong so I copied and pasted the entire code from the demo into my IDE to check if it actually worked, and it turns out that the code that worked in the demo doesn't work in my IDE for some reason.
 
+After some more failed attempts at different codes and a short [stackoverflow](https://stackoverflow.com/questions/79411871/how-to-detect-a-click-on-a-sprite-in-p5play) thread I had basically given up the idea of making the sprite clickable. Instead of having a function carry out when the sprite is clicked, I has going to make another button that would carry out the same function.
 
+With this method, I made it so that when the `pull` button was pressed a new `open` button would be created along with the sprite.
+``` js
+var pull = createButton(`pull`) //make pull button
+pull.position(200, 200);
+
+pull.mousePressed(genRarity); //call `pull` function
+function genRarity(){ //`pull` function
+   var open = createButton('open')
+   open.position(100, 100);
+   box.removeAll();
+   new box.Sprite(windowWidth/2, windowHeight/2);
+}
+```
+Then I was going to add a function to the `open` button until I decided to do some last minute desperate digging for clicking on a sprite.
+
+That's when I found [this video](https://www.youtube.com/watch?v=s-nFqp4Jd3k) on keyboard and mouse inputs with p5play and in the last seconds of the "keyboard input" chapter in the video, the creator shows a snippet of p5play's `sprite.mouse` and I felt like I had just struck gold. I immediatly went to test it out in my IDE to see if it worked.
+
+In my little test I made it so that the sprite is default colored red, blue if the mouse clicks on another part of the screen, and delete the sprite when the mouse clicked on the sprite.
+
+https://github.com/user-attachments/assets/0ba12fb6-7aba-42b4-affc-59335a1d31ea
+
+I don't think I have ever felt such victory over the simple deletion of a sprite before. I then added it into my bigger code with the button and the rng but this time instead of only deleting the "box" sprite, it would also make a new "cat" sprite by adding `new cat.Sprite()` in the `box.mouse.pressed()` conditional function.
+
+https://github.com/user-attachments/assets/cf2c216d-ec74-4a85-96be-71e671e9baa0
 
 
 
