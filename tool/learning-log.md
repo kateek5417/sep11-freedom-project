@@ -359,6 +359,20 @@ I don't think I have ever felt such victory over the simple deletion of a sprite
 
 https://github.com/user-attachments/assets/cf2c216d-ec74-4a85-96be-71e671e9baa0
 
+### 3/8/25
+The next bump I hit was when trying to attach the cat picture pngs onto the sprite to set the sprite's png but the png wouldn't appear, the sprite was still the default ball. I trialed and errored things that I thought might've affected it, maybe somehow the `if()` statement was doing something, maybe it was the png location, png name, etc. Then I thought maybe whether it was in the `setup` function or the `draw` function made a difference, but when I tried to set the pngs for the box crates, those didn't work either.
+
+Then I found out it was because the sprite was a `group`. If the sprite is in a group the png won't work.
+``` js
+//does not work
+var crate = new Group()
+crate.new Sprite()
+crate.img = 'r-crate.png'
+
+//works
+var crate = new Sprite()
+crate.img = 'r-crate.png'
+```
 
 
 
