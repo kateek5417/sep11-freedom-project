@@ -374,5 +374,11 @@ var crate = new Sprite()
 crate.img = 'r-crate.png'
 ```
 
+### 3/9/25
+The next time I opened my IDE and `http-server` the file I was tinkering on, the image pngs suddenly worked. I looked at the code to see if I had just forgotten that I changed the `Group()` but I didn't. So why wasn't it working before and why does it suddenly work now?
+
+The images are still a little buggy because the first `box` and `cat` sprites are still default squares and circles but the ones after work fine. I'll try and fix it later.
+
+I first had the cat images hard-coded to one png only to make sure that it worked and now that it does I have to soft-code it so that different cats are randomly generated based on the `box`'s rarity.
 
 
