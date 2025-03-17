@@ -381,4 +381,26 @@ The images are still a little buggy because the first `box` and `cat` sprites ar
 
 I first had the cat images hard-coded to one png only to make sure that it worked and now that it does I have to soft-code it so that different cats are randomly generated based on the `box`'s rarity.
 
+### 3/ 17
+To generate random cats based on their rarity, I made three different arrays for `rare`, `superRare`, and `superSuperRare` respectively full of the png names of the cat pngs. Then I made a chain of `if()else()` statements with the rarity as the conditional. Inside the statement I would randomly generate the cat type with `[Math.floor(Math.random())]` and store the generated png into the `catType` variable. I `console.log(catType)` to check if it all worked properly. 
+
+```js
+function draw() {
+   if (box.mouse.pressed()){
+      box.removeAll();
+      new cat.Sprite();
+      if (rarity == "r"){
+         catType = rare[Math.floor(Math.random()*7)]
+         console.log(catType)
+      } else if( rarity == "sr"){
+         catType = superRare[Math.floor(Math.random()*5)]
+         console.log(catType)
+      } else if( rarity == "ssr"){
+         catType = superSuperRare[Math.floor(Math.random()*3)]
+         console.log(catType)
+      }
+   }
+}
+```
+However, sometimes the cat type in the console did not match the rarity of the box it came from. I.E. a `ssr` cat would appear from a `rare` box. It doesn't happen all the time but it shouldn't be happening at all. At first I thought it was something wrong with the conditionals and `if()` statements but when I `console.log()` the rarity I noticed something weird was happening.
 
