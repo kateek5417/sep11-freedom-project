@@ -30,10 +30,12 @@ function draw(){
 However this didn't work as I had planned, it would genereate cats from the wrong rarity or not generate any at all. Maybe it is because I didn't upload all the cat pngs into the file tree yet or maybe it is the names in the array.
 
 ### EDP
-I am now in the brainstorming and creating phases of the Engineering Design Process as I brainstorm about possible solutions to errors and implement the ideas into my IDE.
+I am now in the brainstorming and creating phases of the Engineering Design Process as I brainstorm about possible solutions to errors and implement the ideas into my IDE. The next thing I will work on is finishing the random generation of the cat pngs.
 
 ### Skills
-One skill that I have used is embracing failure
+One skill that I have used is having a growth mindset as I have encountered many struggles and challenges throughtout this project but I have perservered everytime until I overcame that challenge.
+
+Another skill I used is debugging where I tinkered and expiremented my way to solutions of the errors and challenges I've come across.
 
 
 [Previous](entry03.md) | [Next](entry05.md)
