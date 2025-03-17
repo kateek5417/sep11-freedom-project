@@ -402,5 +402,12 @@ function draw() {
    }
 }
 ```
-However, sometimes the cat type in the console did not match the rarity of the box it came from. I.E. a `ssr` cat would appear from a `rare` box. It doesn't happen all the time but it shouldn't be happening at all. At first I thought it was something wrong with the conditionals and `if()` statements but when I `console.log()` the rarity I noticed something weird was happening.
+However, sometimes the cat type in the console did not match the rarity of the box it came from. I.E. a `ssr` cat would appear from a `rare` box. It doesn't happen all the time but it shouldn't be happening at all. At first I thought it was something wrong with the conditionals and `if()` statements but when I `console.log()` the rarity I noticed something weird was happening and it might even relate to the problem where the first sprites have no png. 
+
+I think the things on screen are delayed from the console.
+![image](https://github.com/user-attachments/assets/06e05e06-8484-4672-bdd2-9d62f1228997)
+The values inside the console are always one ahead of the values on the actual screen.
+
+
+
 
