@@ -408,6 +408,11 @@ I think the things on screen are delayed from the console.
 ![image](https://github.com/user-attachments/assets/06e05e06-8484-4672-bdd2-9d62f1228997)
 The values inside the console are always one ahead of the values on the actual screen.
 
+### 3/22/25
+I was trying to figure out how fix the problem where the values on the console were not being displayed properly and was looking through my code when I noticed something. In my function I had put the `new cat.Sprite();` and `new box.Sprite();` at the beginning of the function, before all of the follwing code that determined the sprite's image. That's when I remembered how code order affected how the resulting output looked like.
 
+I made a copy so I could tinker with the code without fear of breaking it. 
+![image](https://github.com/user-attachments/assets/e9dc62e8-d577-4bef-b0b9-2bcea9dad71f)
 
+When the `new .Sprite()` was before the generation code, the program would first make the blank sprite and then set the value, however the image would not show because the sprite has already been created before hand. On the otherhand, with the sprite being created after the values were generated, the images that were generated and saved could then be applied to the sprite that has yet to be made. Moving the line of code to the end of the function fixed the issue.
 
