@@ -416,3 +416,7 @@ I made a copy so I could tinker with the code without fear of breaking it.
 
 When the `new .Sprite()` was before the generation code, the program would first make the blank sprite and then set the value, however the image would not show because the sprite has already been created before hand. On the otherhand, with the sprite being created after the values were generated, the images that were generated and saved could then be applied to the sprite that has yet to be made. Moving the line of code to the end of the function fixed the issue.
 
+### 3/24/25
+The next thing I did was to store the cats that the user has unlocked. I did this by creating an empty array named `unlockedCats` and I added a `.push(catType)` into the array inside the mouse pressed on box function. But this way, if the user were to get duplicate cats, it would get stored again anyways, so the array would have multiple of one type. I didn't want that so I searched how to detect if something was already in an array. I found out about `.includes()` through [W3Schools](https://www.w3schools.com/jsref/jsref_includes_array.asp#:~:text=The%20includes()%20method%20returns,()%20method%20is%20case%20sensitive.) and used that as a conditional in a `if()` statement. This way if the current cat is not already in the array, then the function will add the cat type into the array, else it does not add it.
+
+![image](https://github.com/user-attachments/assets/3061010b-d100-4f0c-af73-24dc7e24250b)
