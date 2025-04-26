@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+        <script src="https://p5play.org/v3/planck.min.js"></script>
+        <script src="https://p5play.org/v3/p5play.js"></script>
+
+        <style>
+            /* CSS */
+
+        </style>
+
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- HTML -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="script.js"></script> -->
+        <script>
+            // JS
+            let canX = 750
+            let canY = 750
+
+            let MuellerSUnimg
+
+            let cloudsImg
+            let cloudsX = 0
+
+            let flowerimg
+            let flowersX = 0
+
+            let frenchsound
+
+            function preload() {
+                cloudsImg = loadImage("clouds.png")
+                flowerimg = loadImage("flowers.png")
+                MuellerSUnimg = loadImage("mueller-sun.png")
+
+                // soundFormats("mp3")
+                frenchsound = loadSound("PeriTune_Alleyway-chosic.com_.mp3")
+
+            }
+
+            function setup() {
+                new Canvas(windowWidth, windowHeight)
+                MuellerSUnimg.resize(canX, canY)
+                flowerimg.resize(windowWidth, windowHeight)
+                cloudsImg.resize(canX, canY)
+
+                // backgroundMusic();
+            }
+
+            function backgroundMusic(){
+                frenchsound.play();
+                frenchsound.loop();
+                frenchsound.setVolume(5);
+                userStartAudio()
+            }
+
+
+
+            function draw()
+            {
+                background(117, 225, 250)
+
+                // // sun
+                image(MuellerSUnimg, 0 ,0 )
+
+                // flowers
+                image(flowerimg, flowersX, 0);
+                image(flowerimg, flowersX + width, 0);
+                flowersX -= 2;
+                if(flowersX < -width) flowersX = 2;
+
+                // clouds
+                image(cloudsImg, cloudsX, 0);
+                image(cloudsImg, cloudsX + width,0);
+                cloudsX-= 3;
+                if(cloudsX < -width) cloudsX = 0;
+            }
+
+        </script>
+    </body>
+</html>

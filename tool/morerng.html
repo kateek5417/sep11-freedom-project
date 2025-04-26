@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+        <script src="https://p5play.org/v3/planck.min.js"></script>
+        <script src="https://p5play.org/v3/p5play.js"></script>
+
+        <style>
+            /* CSS */
+
+        </style>
+
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- HTML -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="script.js"></script> -->
+        <script>
+            // JS
+
+            var cat
+            var rng
+            var rarity
+
+
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                cat = new Sprite();
+            }
+
+            function draw() {
+                background(220);
+
+                var r = ["homeless", "dumpster", "sleeping", "loaf", "stretch", "gojo", "sad ham"]
+                var sr = ["fish cat", "cat fish", "long", "flat", "bird"]
+                var ssr = ["rich", "human", "buff"]
+
+                rarGen = Math.floor(Math.random()*100);
+                if (rarGen < 75){rarity = "rare"}
+                else if (rarGen >= 75 && rarGen < 95){rarity = "super"}
+                else if (rarGen >= 95) {rarity = "supersuper"}
+
+                if (rarity == "rare"){
+                    ranCar = r[Math.floor(Math.random()*7)];
+                } else if (rarity == "super"){
+                    ranCar = sr[Math.floor(Math.random()*5)]
+                } else if (rarity == "supersuper"){
+                    ranCar = ssr[Math.floor(Math.random()*3)]
+                }
+
+                console.log(rarGen)
+                console.log(rarity)
+                console.log(ranCar)
+                console.log(rng)
+
+            }
+
+
+
+        </script>
+    </body>
+</html>
