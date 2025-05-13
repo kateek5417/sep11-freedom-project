@@ -1,16 +1,18 @@
 # Presentation Plan
 
 ## Hook
-* 
+* How often do you (audience) leave things up to chance in life?
+* Audience takes risks regularly
 
 ## Product
-* 
+* Run through premise of the game and pull function
 
 ## Process
-* 
+* p5play sprites + images -> rng conditionals -> user inputs + buttons -> currency counter -> open cat crate
 
 ## Conclusion
-* 
+* project link
+* takeaways: Break steps down, don't plan too big 
 
 <!-- EXAMPLE
 
