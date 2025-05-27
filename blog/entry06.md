@@ -5,16 +5,10 @@
 After we finished up our products, we then had to present it to our class and then give an elevator pitch in the Expo infront of judges. To prepare for them, my partner and I created a presentation slide show for our class and drafted a simple script for our pitch.
 
 #### In class
-Takeaways I got from the in-class presentation is the importance of strong eye contact and the way one projects their voice. Keeping good eye contact with the audience helps maintain engagement and attention. Additionally, it also improves the audience's perspective of one's knowledge on their presentation as people can tell when someone reads off the board compared to someone who really knows what they are presenting. 
-
-Eye contact
-Body language
-Projection
+Takeaways I got from the in-class presentation is the importance of strong eye contact and the way one projects their voice. Keeping good eye contact with the audience helps maintain engagement and attention. Additionally, it also improves the audience's perspective of one's knowledge on their presentation as people can tell when someone reads off the [slides](https://docs.google.com/presentation/d/1kNJ3U2zIFahoc7eQWihP7v_bDOIq0wE5Y6k-PR0tRYw/edit?slide=id.g357ea61c767_0_6#slide=id.g357ea61c767_0_6) compared to someone who really knows what they are presenting. It is also important to project yourself properly in a clear and loud but not overbearing manner to best interact with the audience as mumbling can leave the audience confused and disinterested.
 
 #### Expo
-always be prepared
-Practice
-Communication
+Takeaways I have from my experience at the expo is the importance of communication between collaborators and preparation. I ferlt that my partner and I were not fully ready for the expo because though I had written a [draft](https://docs.google.com/document/d/117igknNRQwWthQaOVm1sDASUPWZ2YJczcscMUoqMtRM/edit?tab=t.0) of the pitch script earlier, I had forgotten to inform my partner about it until after the weekend, meaning neither of us had worked out who was presenting which part and unsure of what each were going to say. Another thing I learned from the expo was to always be ready to present because the judges caught my partner and I by suprise when they came up to us and we panicked a little as we gave our pitch. Had we been focused and aware of our surroundings, we would have been ready to give our pitch.
 
 [Previous](entry05.md) | [Next](entry07.md)
 
