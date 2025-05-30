@@ -13,6 +13,9 @@ Takeaways I have from my experience at the expo is the importance of communicati
 ### EDP
 The in-class presentation and expo were both part of the last step of the engineering design process which is to communicate the result of our product where we described the purpose and function of our project to our audiences.
 
+![image](https://github.com/user-attachments/assets/9b1a178d-3372-427f-b502-bb1b04c1b934)
+
+
 ### Skills
 The most vital skill I exercized was Communication, as I needed to properly conjugate what my project was to a diverse audience that might not understand the concept of my project. I had to convey the idea in a way that people could understand so I included examples of popular games that are well known by the public, such as Pokemon card packs.
 
